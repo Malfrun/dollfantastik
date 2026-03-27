@@ -12,14 +12,14 @@ body {
 .heading-grid-container {
   display: grid;
 
-  width: 60em;
+  width: 60vw;
   margin: auto;
 
   gap: 0.5em;
   padding: 0.5em;
 }
 
-.navbar {
+/* .navbar {
   border-style: double;
   border-color: #616161;
   border-radius: 12px;
@@ -39,6 +39,11 @@ body {
   grid-template-columns: 6em 6em 6em 6em;
   gap: 10px;
   padding: 5px;
+} */
+
+.navbar
+{
+  display: block;
 }
 
 .navbar a {
@@ -46,7 +51,7 @@ body {
 }
 
 .navbar ul {
-  list-style-type: none;
+
 }
 
 .navbar button {
@@ -63,15 +68,17 @@ body {
 }
 
 .body-grid-container {
-  width: 60em;
+  width: 60vw;
+  height: 400px;
   margin: auto;
   display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 600px;
+  
+  
+  grid-template-columns: 30% 20% 60%;
+  grid-template-rows: 1fr;
 
-  gap: 0.5em;
-  padding: 0.5em;
+  gap: 0em;
+  padding: 2vh;
 }
 
 .body-item {
@@ -81,15 +88,89 @@ body {
     rgba(125, 185, 232, 0) 100%
   ); */
   background: linear-gradient(to bottom, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);
-  padding: 2em;
-
+  background-image: url("https://i.pinimg.com/736x/2a/9b/3b/2a9b3be48e665563d88cd00e19734d88.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   box-shadow: 0px 8px 32px 0px #004178;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border-radius: 10px;
-  border-style: inset;
-  border-color: gray;
+  border-radius: 50%;
+  aspect-ratio: 1/ 1;
+
+  border-width: 5px;
+  border-style: outset;
+  
+
+  z-index: 2;
+}
+
+.child-1
+{
+  grid-column: 1/ span 2;
+  grid-row: 1;
+}
+
+.navbar 
+{
+  display:grid;
   justify-content: left;
+  grid-column: 2/ span 3;
+  grid-row: 1;
+
+  padding: 85px;
+
+  align-items: center;
+  z-index: 1;
+}
+
+.nav-element{
+  --p: 50px;
+  width: 400px;
+  height: 70px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%);
+   background: rgba(192, 192, 192, 0.4);
+    box-shadow: 0px 8px 32px 0px #004178;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border: 1px solid rgba(224, 247, 250, 0.18);
+    color: #e0f7fa;
+   
+
+  
+
+}
+
+.nav-element p{
+  vertical-align: middle;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 40px;
+}
+
+.nav-element:nth-child(1)
+{
+
+}
+
+.nav-element:nth-child(2)
+{
+  width: 350px;
+}
+
+.nav-element:nth-child(3)
+{
+  width: 300px;
+}
+
+.nav-element:nth-child(4)
+{
+  width: 249px;
+}
+
+.nav-element button{
+  width: 60vh;
+  height: 40px;
 }
 
 .portrait
@@ -102,4 +183,11 @@ body {
   width: 75%;
   height: auto;
   border-radius: 5px;
+}
+
+
+/* This effect was created on frutigeraerogames.com */
+.glassmorphic-box {
+    
+    
 }
