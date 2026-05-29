@@ -1,25 +1,73 @@
-body {
- background-color: black;
+html
+{
 
- margin-top: 1%;
+}
+
+body {
+background-image: url(metalheart_124.jpg);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+background-size: 1920px 1080px;
+background-repeat: no-repeat;
+margin-top: 1%;
 }
 
 p {
-  font-family: Quantico, Geneva, Tahoma, sans-serif;
+  font-family: Oxanium, Geneva, Tahoma, sans-serif;
   color: white;
   padding-left: 10px;
 }
 
 .heading-grid-container {
-  display: grid;
-  
+  justify-content: right;
+  grid-row: 3;
+  grid-column: 3/ span 4;
+  margin-top: 20vh;
+}
+
+.slide-in
+{
+  animation: slideIn .7s ease-out forwards,
+  motionBlur 1s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+}
+
+.slide-in img{
+ max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+
+@keyframes slideIn
+{
+  from{
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(-5vw);
+  }
+}
+
+@keyframes motionBlur {
+  0% {
+    filter: url(#motion-blur);
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+  }
+  50% {
+    filter: blur(8px);
+  }
+  100% {
+    filter: blur(0px);
+  }
 }
 
 .body-container
 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2%;
 }
 
 .nav-container {
@@ -35,6 +83,8 @@ p {
   grid-row: 2 /span 3 ;
   grid-column: 2/span 3;
   margin: 6vh;
+  margin-right: 2vw;
+  text-align: right;
 }
 
 .nav-border {
@@ -51,7 +101,6 @@ p {
 }
 
 .nav-img {
-  
 
   display: flex;
   align-items: flex-end;
@@ -104,12 +153,15 @@ clip-path: polygon(0 0, 90% 0, calc(80% - var(--p)) 100%, 0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(192, 192, 192, 0.4);
+  background: rgba(161, 161, 161, 0.375);
   height: 100%;
   width: 100%;
   transition: width 1s;
   text-indent: 50px;
+  font-family: Merriweather, 'tenor sans', Serif;
+  text-shadow: 1px 1px 2px black;
 }
+
 
 .nav-element:hover {
   cursor: pointer;
